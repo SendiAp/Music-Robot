@@ -51,7 +51,7 @@ client = spotipy.Spotify(
 async def spotify_dl(_, message):
     link = message.matches[0].group(0)
     m = await message.reply_text(
-        f"**Gathering info from your [link]({link}).**"
+        f"**Mengumpulkan info dari Anda [link]({link}).**"
     )
     try:
         parsed_item = await parse_spotify_url(link)
@@ -85,7 +85,7 @@ async def spotify_dl(_, message):
             song = await fetch_spotify_track(client, item_id)
             PForCopy = await message.reply_photo(
                 song.get("cover"),
-                caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n🎼 Genre : `{song['genre']}`\n🗓 Release Year: `{song['year']}`",
+                caption=f"🎧 **Title:** {song['name']}\n🗣️ **Artist:** {song['artist']}\n📒 **Album:** {song['album']}\n🎼 **Genre:** {song['genre']}\n🗓 **Release Year:** {song['year']}`\",
             )
             path = await download_songs(song, randomdir)
             thumbnail = await thumb_down(song.get("cover"), song.get("name"))
