@@ -61,7 +61,7 @@ async def start(client, message):
         and message.from_user.id not in SUDO_USERS
     ):
         return await message.reply_text(
-            "▫️**Bot ini tidak akan berfungsi** dalam kelompok kecuali diizinkan.",
+            "▫️ **Hello {message.from_user.first_name}** Saya Adalah Bot Mengunduh Lagu.\n\n👉 **Saya Dapat Mengunduh Lagu** Dari YouTube, Spotify, Deezer.\n\n▪️ **Caranya Gimana?**\nKirimkan Link Youtube / Spotify / Deezer.\n\n• **Deezer Support** : Playlist/Album/Track Link.\n• **Spotify Support** : Track/Playlist/Album/Show/Episode.(link)",
             reply_markup=InlineKeyboardMarkup(reply_markup),
         )
     return await message.reply_text(
