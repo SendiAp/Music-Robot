@@ -65,7 +65,15 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(reply_markup),
         )
     return await message.reply_text(
-        f"Hello {message.from_user.first_name}, I'm a Simple Music Downloader Bot. I Currently Support Download from Youtube.",
+        f"▫️ **Hello {message.from_user.first_name}** Saya Adalah Bot Mengunduh Lagu.
+
+👉 **Saya Dapat Mengunduh Lagu** Dari YouTube, Spotify, Deezer.
+
+▪️ **Caranya Gimana?**
+Kirimkan Link Youtube / Spotify / Deezer.
+
+• **Deezer Support** : Playlist/Album/Track Link.
+• **Spotify Support** : Track/Playlist/Album/Show/Episode.(link)",
         reply_markup=InlineKeyboardMarkup(reply_markup),
     )
 
