@@ -93,7 +93,7 @@ async def spotify_dl(_, message):
                 path,
                 performer=song.get("artist"),
                 title=f"{song.get('name')} - {song.get('artist')}",
-                caption=f"[{song.get('name')}](https://open.spotify.com/track/{song.get('deezer_id')}) | {song.get('album')} - {song.get('artist')}",
+                caption=f"[{song.get('name')}](https://open.spotify.com/track/{song.get('deezer_id')}) | {song.get('album')} - {song.get('artist')}\n**Request By:** {message.from_user.first_name}",
                 thumb=thumbnail,
             )
             if LOG_GROUP:
@@ -111,7 +111,7 @@ async def spotify_dl(_, message):
                 )
                 PForCopy = await message.reply_photo(
                     song.get("cover"),
-                    caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n🎼 Genre : `{song['genre']}`\n🗓 Release Year: `{song['year']}`\n🔢 Track No: `{track_no}`\n🔢 Total Track: `{total_tracks}`",
+                    caption=f"🎧 **Title:** {song['name']}\n🎤 **Artist:** {song['artist']}\n📒 **Album:** {song['album']}\n🎼 **Genre:** {song['genre']}\n🗓 **Release Year:** {song['year']}\n🔢 **Track No:** {track_no}\n🔢 **Total Track:** {total_tracks}",
                 )
                 path = await download_songs(song, randomdir)
                 thumbnail = await thumb_down(
@@ -121,7 +121,7 @@ async def spotify_dl(_, message):
                     path,
                     performer=song.get("artist"),
                     title=f"{song.get('name')} - {song.get('artist')}",
-                    caption=f"[{song.get('name')}](https://open.spotify.com/track/{song.get('deezer_id')}) | {song.get('album')} - {song.get('artist')}",
+                    caption=f"[{song.get('name')}](https://open.spotify.com/track/{song.get('deezer_id')}) | {song.get('album')} - {song.get('artist')}\n**Request By:** {message.from_user.first_name}",
                     thumb=thumbnail,
                 )
                 track_no += 1
@@ -134,7 +134,7 @@ async def spotify_dl(_, message):
                 song = await fetch_spotify_track(client, track.get("id"))
                 PForCopy = await message.reply_photo(
                     song.get("cover"),
-                    caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n🎼 Genre : `{song['genre']}`\n🗓 Release Year: `{song['year']}`",
+                    caption=f"🎧 **Title:** {song['name']}\n🗣️ **Artist:** {song['artist']}\n📒 **Album:** {song['album']}\n🎼 **Genre:** {song['genre']}\n🗓 **Release Year:** {song['year']}",
                 )
                 path = await download_songs(song, randomdir)
                 thumbnail = await thumb_down(
@@ -144,7 +144,7 @@ async def spotify_dl(_, message):
                     path,
                     performer=song.get("artist"),
                     title=f"{song.get('name')} - {song.get('artist')}",
-                    caption=f"[{song.get('name')}](https://open.spotify.com/track/{song.get('deezer_id')}) | {song.get('album')} - {song.get('artist')}",
+                    caption=f"[{song.get('name')}](https://open.spotify.com/track/{song.get('deezer_id')}) | {song.get('album')} - {song.get('artist')}\n**Request By:** {message.from_user.first_name}",
                     thumb=thumbnail,
                 )
                 if LOG_GROUP:
