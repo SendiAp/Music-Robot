@@ -58,7 +58,7 @@ async def link_handler(_, message):
             for song in songs:
                 PForCopy = await message.reply_photo(
                     song.get("cover"),
-                    caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n💽 Song Number : `{song['playlist_num']}`",
+                    caption=f"🎧 **Title:** {song['name']}\n🗣️ **Artist:** {song['artist']}\n💽 **Album:** {song['album']}\n📄 **Song Number:** {song['playlist_num']}",
                 )
                 path = await download_songs(song, randomdir)
                 thumbnail = await thumb_down(
@@ -68,7 +68,7 @@ async def link_handler(_, message):
                     path,
                     performer=song.get("artist"),
                     title=f"{song.get('name')} - {song.get('artist')}",
-                    caption=f"[{song['name']}](https://www.deezer.com/track/{song['deezer_id']}) | {song['album']} - {song['artist']}",
+                    caption=f"[{song['name']}](https://www.deezer.com/track/{song['deezer_id']}) - {song['album']}\n**Request By:** {message.from_user.first_name}",
                     thumb=thumbnail,
                     duration=song["duration"],
                 )
@@ -78,9 +78,9 @@ async def link_handler(_, message):
             await m.delete()
         elif item_type == "artist":
             await m.edit_text(
-                "This Is An Artist Account Link. Send me Track, Playlist or Album Link :)"
+                "Ini Adalah Tautan Akun Artis. Kirimi saya Lagu, Daftar Putar, atau Tautan Album :)"
             )
         else:
-            await m.edit_text("Link Type Not Available for Download.")
+            await m.edit_text("Jenis Tautan Tidak Tersedia untuk Diunduh.")
     except Exception as e:
         await m.edit_text(f"Error: {e}", quote=True)
