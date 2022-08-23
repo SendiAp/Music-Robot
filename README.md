@@ -16,3 +16,30 @@ A Simple Music Downloader Bot For Telegram with Youtube Music, Spotify & Deezer 
     <img src="https://img.shields.io/github/forks/rozari0/MusicDownloader?style=for-the-badge&logo=appveyor" alt="Forks">
     <img src="https://img.shields.io/github/stars/rozari0/MusicDownloader?style=for-the-badge&logo=appveyor" alt="Stars">
 </p>
+
+## Deployment
+
+To deploy this project run
+
+### Easy Way (Local)
+```bash
+  cp sample_config.env config.env
+  pip3 install -r requirements.txt
+  python3 -m mbot
+```
+### Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/rozari0/MusicDownloader/)
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your config.env file
+
+`API_ID`
+`API_HASH`
+`BOT_TOKEN`
+`SPOTIPY_CLIENT_ID`
+`SPOTIPY_CLIENT_SECRET`
+`UPDATES_CHANNEL`
+`LOG_GROUP`
+`DATABASE_URL`
+`AUTH_CHATS`
