@@ -6,7 +6,7 @@
     "music",
     "music downloader"
   ],
-  "repository": "https://github.com/SendiAp/Music-Robot/",
+  "repository": "https://github.com/SendiAp/Music-Robot",
   "website": "https://t.me/pikyus1",
   "success_url": "https://t.me/smprojectID",
   "env": {
