@@ -85,7 +85,7 @@ async def spotify_dl(_, message):
             song = await fetch_spotify_track(client, item_id)
             PForCopy = await message.reply_photo(
                 song.get("cover"),
-                caption=f"🎧 **Title:** {song['name']}\n🗣️ **Artist:** {song['artist']}\n📒 **Album:** {song['album']}\n🎼 **Genre:** {song['genre']}\n🗓 **Release Year:** {song['year']}`\",
+                caption=f"🎧 **Title:** {song['name']}\n🗣️ **Artist:** {song['artist']}\n📒 **Album:** {song['album']}\n🎼 **Genre:** {song['genre']}\n🗓 **Release Year:** {song['year']}",
             )
             path = await download_songs(song, randomdir)
             thumbnail = await thumb_down(song.get("cover"), song.get("name"))
