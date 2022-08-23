@@ -65,15 +65,7 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(reply_markup),
         )
     return await message.reply_text(
-        f"▫️ **Hello {message.from_user.first_name}** Saya Adalah Bot Mengunduh Lagu.
-
-👉 **Saya Dapat Mengunduh Lagu** Dari YouTube, Spotify, Deezer.
-
-▪️ **Caranya Gimana?**
-Kirimkan Link Youtube / Spotify / Deezer.
-
-• **Deezer Support** : Playlist/Album/Track Link.
-• **Spotify Support** : Track/Playlist/Album/Show/Episode.(link)",
+        f"▫️ **Hello {message.from_user.first_name}** Saya Adalah Bot Mengunduh Lagu.\n\n👉 **Saya Dapat Mengunduh Lagu** Dari YouTube, Spotify, Deezer.\n\n▪️ **Caranya Gimana?**\nKirimkan Link Youtube / Spotify / Deezer.\n\n• **Deezer Support** : Playlist/Album/Track Link.\n• **Spotify Support** : Track/Playlist/Album/Show/Episode.(link)",
         reply_markup=InlineKeyboardMarkup(reply_markup),
     )
 
