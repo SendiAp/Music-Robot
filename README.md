@@ -28,7 +28,7 @@ To deploy this project run
   python3 -m mbot
 ```
 ### Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/rozari0/MusicDownloader/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/SendiAp/Music-Robot/)
 
 ## Environment Variables
 
