@@ -58,7 +58,7 @@ async def _(_, message):
             thumnail = await thumb_down(id[0])
             AForCopy = await message.reply_audio(
                 fileLink,
-                caption=f"[{id[3]}](https://youtu.be/{id[0]})\n**Upload By:** {message.from_user.first_name}",
+                caption=f"[{id[3]}](https://youtu.be/{id[0]})\n**Request By:** {message.from_user.first_name}",
                 title=id[3].replace("_", " "),
                 performer=id[2],
                 thumb=thumnail,
